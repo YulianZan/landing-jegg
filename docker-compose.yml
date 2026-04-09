@@ -6,7 +6,7 @@ services:
       - ./index.html:/usr/share/nginx/html/index.html:ro
       - ./fondo-ldg.jpg:/usr/share/nginx/html/fondo-ldg.jpg:ro
     ports:
-      - "8080:80"
+      - "8082:80"
 
   tunnel:
     image: cloudflare/cloudflared:latest
