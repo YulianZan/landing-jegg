@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Icarus | REMAX PREMIER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Quicksand:wght@400;500;600;700&family=Questrial&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('fondo-ldg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .brand {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', 'Gotham', sans-serif;
+        }
+
+        .remax {
+            color: #dc2626;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .logo-container {
+            margin: 30px 0;
+            text-align: center;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .logo-placeholder {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0 10px;
+            color: #1e3a8a;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #dc2626;
+            font-size: 14px;
+            margin-bottom: 25px;
+            font-family: 'Questrial', sans-serif;
+        }
+
+        .agents-grid {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .partner-logo-wrap {
+            display: flex;
+            justify-content: center;
+            margin-top: -10px;
+            margin-bottom: 36px;
+        }
+
+        .partner-logo {
+            width: min(230px, 75%);
+            height: auto;
+            animation: gentleBob 3.2s ease-in-out infinite;
+            filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2));
+        }
+
+        @keyframes gentleBob {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .agent-card {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+            box-shadow: 0 4px 15px rgba(30, 64, 175, 0.2);
+        }
+
+        .agent-card:nth-child(even) {
+            background: linear-gradient(135deg, #dc2626, #ef4444);
+        }
+
+        .agent-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .agent-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e40af;
+            flex-shrink: 0;
+        }
+
+        .agent-name {
+            font-size: 18px;
+            font-weight: bold;
+            flex-grow: 1;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .services-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e5e7eb;
+        }
+
+        .services-title {
+            font-size: 18px;
+            text-align: center;
+            color: #374151;
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            border-radius: 16px;
+            padding: 25px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #1e3a8a;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            box-shadow: 0 8px 20px rgba(30, 64, 175, 0.2);
+        }
+
+        .service-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .service-name {
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .brand {
+                font-size: 24px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="brand">Team Icarus | <span class="remax">REMAX PREMIER</span></div>
+            <p class="tagline">Te acompañamos en cada etapa de tu proceso de compra, venta y asesoría inmobiliaria con respaldo profesional.</p>
+        </div>
+
+        <div class="logo-container">
+            <div class="logo-placeholder">
+                <img src="https://gtgluserimages.blob.core.windows.net/userimages/1028/4a89c382-d90f-44e9-b27f-e972b70aceed.jpg" alt="Icarus Logo" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+        </div>
+
+        <h2 class="section-title">Nuestro equipo de Agentes:</h2>
+        <p class="subtitle">Elige con quién quieres hablar y contáctanos directamente por WhatsApp.</p>
+
+        <div class="agents-grid">
+            <a href="https://wa.me/56981562461" target="_blank" class="agent-card">
+                <div class="agent-avatar">
+                    <img src="https://gtgluserimages.blob.core.windows.net/userimages/1028/A_4cd69a817b444d6faf8f8d82489e7e8b_iList.jpg" alt="Juan Enrique González" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 20%;">
+                </div>
+                <div class="agent-name">JUAN ENRIQUE GONZÁLEZ</div>
+            </a>
+
+            <a href="https://wa.me/56922137508" target="_blank" class="agent-card">
+                <div class="agent-avatar">
+                    <img src="https://gtgluserimages.blob.core.windows.net/userimages/1028/1057164844-5ca7c23b-bc68-467b-9b7e-25bec2c725e2.jpg" alt="Mónica Arredondo" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 20%;">
+                </div>
+                <div class="agent-name">MÓNICA ARREDONDO</div>
+            </a>
+
+            <a href="https://wa.me/56932527072" target="_blank" class="agent-card">
+                <div class="agent-avatar">
+                    <img src="https://gtgluserimages.blob.core.windows.net/userimages/1028/1057164845-c8b8661a-4813-454e-b956-4321f3240092.jpg" alt="Raimundo Cabrera" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 20%;">
+                </div>
+                <div class="agent-name">RAIMUNDO CABRERA</div>
+            </a>
+
+            <a href="https://wa.me/56989063610" target="_blank" class="agent-card">
+                <div class="agent-avatar">
+                    <img src="https://gtgluserimages.blob.core.windows.net/userimages/1028/1057164843-54a96122-bb51-411d-809e-3b885abf3452.jpg" alt="Trinidad Errázuriz" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 20%;">
+                </div>
+                <div class="agent-name">TRINIDAD ERRÁZURIZ</div>
+            </a>
+        </div>
+
+        <div class="partner-logo-wrap" aria-label="Logo destacado">
+            <img class="partner-logo" src="https://datalakephoenixdev.blob.core.windows.net/cms-uploads/ljvrbfm0l7mtps3ricrij3cz/attachments/j0g1x8x6il7q08vza7o70sls-ke9s6iz8xabbnfck37i8q2l4-logo.svg" alt="Logo destacado">
+        </div>
+
+        <div class="services-section">
+            <h3 class="services-title">Servicios profesionales que complementan tu proceso inmobiliario</h3>
+            <div class="services-grid">
+                <a href="https://valorraiz.cl" target="_blank" class="service-card">
+                    <div class="service-icon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzQWlox5nASObap2UJgV_vdLd8Kao5SNXgcw&s" alt="Tasaciones Inmobiliarias" style="width: 70px; height: 70px; object-fit: contain;">
+                    </div>
+                    <div class="service-name">Tasaciones Inmobiliarias</div>
+                </a>
+
+                <a href="https://jegg.cl" target="_blank" class="service-card">
+                    <div class="service-icon">
+                        <img src="https://jegg.cl/wp-content/uploads/2021/03/logoNuevo.png" alt="JEGG Arquitectura" style="width: 70px; height: 70px; object-fit: contain;">
+                    </div>
+                    <div class="service-name">Estudio de Arquitectura</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
