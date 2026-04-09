@@ -129,8 +129,13 @@
         }
 
         .partner-logo-link {
-            display: inline-block;
+            display: flex;
+            width: 100%;
+            justify-content: center;
             text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
         }
 
         .partner-logo {
@@ -139,6 +144,7 @@
             height: auto;
             object-fit: contain;
             display: block;
+            pointer-events: none;
             animation: gentleBob 3.2s ease-in-out infinite;
             filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2));
         }
@@ -307,11 +313,9 @@
             </a>
         </div>
 
-        <div class="partner-logo-wrap" aria-label="Logo destacado">
-            <a class="partner-logo-link" href="https://www.remax.cl/team/1589" target="_blank" rel="noopener noreferrer" aria-label="Ir al perfil de Team REMAX">
-                <img class="partner-logo" src="https://images.seeklogo.com/logo-png/32/1/remax-logo-png_seeklogo-328735.png" alt="Logo REMAX destacado">
-            </a>
-        </div>
+        <a class="partner-logo-wrap partner-logo-link" href="https://www.remax.cl/team/1589" target="_blank" rel="noopener noreferrer" aria-label="Ir al perfil de Team REMAX">
+            <img class="partner-logo" src="https://images.seeklogo.com/logo-png/32/1/remax-logo-png_seeklogo-328735.png" alt="Logo REMAX destacado">
+        </a>
 
         <div class="services-section">
             <h3 class="services-title">Servicios profesionales que complementan tu proceso inmobiliario</h3>
